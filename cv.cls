@@ -12,7 +12,7 @@
 \RequirePackage[dvipsnames,svgnames,x11names,hyperref]{xcolor}
 \definecolor{SpiritPurple}{HTML}{4b2e83}
 \definecolor{AccentLavender}{HTML}{c5b4e3}
-\RequirePackage[hidelinks]{hyperref}
+\RequirePackage[hidelinks, breaklinks=true]{hyperref}
 \hypersetup{colorlinks, urlcolor=SpiritPurple}
 \RequirePackage{fancyhdr}
 \RequirePackage[english]{babel}
@@ -22,8 +22,10 @@
 \RequirePackage{bold-extra}
 \input{glyphtounicode}
 
+\RequirePackage{ulem}
+
 \let\oldhref\href
-\renewcommand{\href}[2]{\oldhref{#1}{\underline{\bfseries#2}}}
+\renewcommand{\href}[2]{\oldhref{#1}{\uline{\bfseries#2}}}
 
 
 %---------- FONT OPTIONS ----------
